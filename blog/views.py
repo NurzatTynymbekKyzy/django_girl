@@ -27,8 +27,6 @@ def post_new(request):
     else:
         form = PostForm()
     return render(request, 'post_new.html', {'form': form})
-
-
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
